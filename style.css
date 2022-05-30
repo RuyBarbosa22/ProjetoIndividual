@@ -418,13 +418,10 @@ container-txt h3 {
   text-align: left;
 }
 
-.video-pq {
-  width: 80%;
-  height: 50%;
-  background-color: red;
+.container-direita-pq video {
+  margin-top: 15%;
+ width: 130%;
 }
-
-
 
 
 /*footer*/
