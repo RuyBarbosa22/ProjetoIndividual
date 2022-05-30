@@ -18,14 +18,29 @@ function showSection(){
     }, 1);
     biblioteca.style.display = 'none'
 
+    mostrar.style.display = 'flex'
+    esconder.style.display = 'none'
+
   }else{
     setTimeout(() => {
       biblioteca.style.opacity = '1'
     }, 1);
     
+    mostrar.style.display = 'none'
+    esconder.style.display = 'flex'
     biblioteca.style.display = 'flex'
   }
 
   btnClicks++
 
+}
+
+//funções de encaminhamento de tela
+
+function Contato(){
+  window.location.href = "login.html";
+}
+
+function Login(){
+  window.location.href = "contato.html";
 }

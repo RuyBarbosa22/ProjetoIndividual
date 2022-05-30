@@ -106,10 +106,10 @@ header {
   height: 100vh;
   display: flex;
   justify-content: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.644), rgba(0,0,0,0.644));  
+  background-image: linear-gradient(rgba(0, 0, 0, 0.644), rgba(0, 0, 0, 0.644));
 }
 
-.banner video { 
+.banner video {
   position: absolute;
   top: 0;
   left: 0;
@@ -256,28 +256,21 @@ container-txt h3 {
 
 .container-quiz {
   display: flex;
-  flex-direction: row;
-  align-items: left;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100vh;
   background-color: #2c2c2c;
+  padding-bottom: 2%;
 }
 
 .quiz {
-  width: 50%;
+  width: 80%;
   height: 80vh;
   margin-top: 5%;
   background-color: white;
   border-radius: 1%;
-  margin-left: 5%;
-}
-
-.container-vid {
-  width: 35%;
-  height: 80vh;
-  background-color: green;
-  margin-left: 5%;
-  margin-top: 5%;
 }
 
 .alinhar-btn {
@@ -308,9 +301,9 @@ container-txt h3 {
 .container-biblioteca {
   width: 100%;
   height: 100vh;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  background-color: gray;
+  padding-top: 15%;
+  padding-bottom: 15%;
+  background-color: #2c2c2c;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -319,7 +312,7 @@ container-txt h3 {
 .divisoria {
   width: 20%;
   height: 100%;
-  background-color: red;
+  background-color: #2c2c2c;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -329,16 +322,110 @@ container-txt h3 {
 
 .card-vid {
   width: 100%;
-  height: 50%;
-  border: solid 5px black;
-  background-color: green;
+  height: 60%;
+  border: solid 5px white;
+  background-color: #2c2c2c;
   margin-top: 2%;
+}
+
+.card-vid img {
+  width: 100%;
+  height: 100%;
 }
 
 #biblioteca {
   transition: 2s;
   opacity: 0;
 }
+
+/*Section Porque*/
+
+.container-porque {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.container-esquerda-pq {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  background-color: #2c2c2c;
+  width: 60%;
+  height: 100%;
+}
+
+.container-direita-pq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: blueviolet;
+  width: 40%;
+  height: 100%;
+}
+
+.title-pq {
+  font-size: 4em;
+  color: white;
+  font-family: "Gazpacho", serif;
+  text-align: left;
+  margin-left: 6%;
+  margin-top: 8%;
+}
+
+.container-btn-ctt {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 5%;
+  align-self: center;
+}
+
+.txt-pq {
+  font-size: 1.2em;
+  color: white;
+  font-family: 'Outfit', sans-serif;
+  margin-left: 5%;
+  margin-top: 2%;
+  width: 90%;
+  text-align: left;
+}
+
+#btn-ctt-pq {
+  width: 14vw;
+  height: 8vh;
+  margin-left: 5%;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 400;
+  cursor: pointer;
+  font-family: 'Outfit', sans-serif;
+  background: rgb(112, 21, 194);
+  background: linear-gradient(48deg, rgba(112, 21, 194, 1) 0%, rgba(146, 47, 250, 1) 50%, rgba(196, 85, 255, 1) 100%);
+}
+
+.txt-contato {
+
+  font-size: 1.2em;
+  color: white;
+  font-family: 'Outfit', sans-serif;
+  margin-left: 5%;
+  width: 50%;
+  text-align: left;
+}
+
+.video-pq {
+  width: 80%;
+  height: 50%;
+  background-color: red;
+}
+
+
+
 
 /*footer*/
 
