@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entre em sua conta</title>
+    <link rel="stylesheet" href="styleCad.css">
+    <link rel="shortcut icon" href="./images/icon.jpg">
+</head>
+
+<body>
+
+    <!-- NavBar e video de banner -->
+    <header>
+        <nav>
+            <div class="menu-content">
+                <div class="icone">
+                    <a href="index.html">Ruy Barbosa</a>
+                </div>
+                <ul class="menu-itens">
+                    <li><a class="itens" href="">Início</a></li>
+                    <li><a class="itens" href="">Jogos</a></li>
+                    <li><a class="itens" href="">Quiz</a></li>
+                    <li><a class="itens" href="">Contato</a></li>
+                </ul>
+                <div class="cad-log">
+                    <button id="btn-ent">Entrar</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="css-selector">
+
+        <!-- Login -->
+        <div class="alinhamento">
+            <div class="container-cad">
+                <div class="Cadleft">
+                    <span id="title-cad">Prove seu <br> valor</span>
+                    <span id="txt-cad">Cadastre-se e teste seus conhecimentos </span>
+                </div>
+                <div class="Cadright">
+                    <h3>Um novo player no lobby</h3>
+                    <p>Cadastre-se e aproveite o site!</p>
+
+                    <span class="title-input">Nome</span>
+                    <input autofocus placeholder="Nome de usuário" type="text" id="nome" class="input-cad">
+
+                    <span class="title-input">Email</span>
+                    <input placeholder="Exemplo@exemplo.com" type="email" id="email" class="input-cad">
+
+                    <span class="title-input">Senha</span>
+                    <input placeholder="Senha" type="password" id="senha" class="input-cad">
+
+                    <span class="title-input-conf">Confirme sua senha</span>
+                    <input placeholder="Confirme sua senha" type="password" id="conf-senha" class="input-cad">
+
+                    <button class="btn-cad" onclick="Cadastro()">Cadastrar</button>
+
+                    <div class="container-span">
+                        <span>Já tem uma conta?</span><a href="./login.html">Entrar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <div class="container-footer">
+            <div class="esquerda">
+                <div class="itens-footer">
+                    <a href="index.html">Início</a>
+                    <a href="">Porque</a>
+                    <a href="">Início</a>
+                    <a href="">Início</a>
+                </div>
+                <div class="detalhe1"></div>
+                <div class="assinatura">
+                    <h3>Developed by @Ruy 2022</h3>
+                </div>
+            </div>
+            <div class="direita">
+                <div class="sociais">
+                    <a href="https://github.com/RuyBarbosa22" target="_blank"><img src="./images/github.svg"></a>
+                    <!--Git Hub-->
+                    <a href="https://www.instagram.com/ysd.ruyy/" target="_blank"><img src="./images/instagram.svg"></a>
+                    <!--Istagram-->
+                    <a href="https://steamcommunity.com/id/MeneAkatsu/" target="_blank"><img
+                            src="./images/steam.svg"></a>
+                    <!--Steam-->
+                    <a href="https://www.linkedin.com/in/ruy-barbosa-231aa1239/" target="_blank"><img
+                            src="./images/linkedin.svg"></a>
+                    <!--Linkedin-->
+                    <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsCcMvcDQrZxBgTPHdpszXvKgsLVtPPxLXwThqFLGjNvjGMvhpklMcXlclQBLnzXKtFCnxbv"
+                        target="_blank"><img src="./images/gmail.svg"></a>
+                    <!--Gmail-->
+                </div>
+                <div class="detalhe2"></div>
+                <div class="container-contato">
+                    <p id="desc-btn">Algum dúvida ou sugestão? Fale comigo!</p>
+                    <button id="btn-footer">
+                        Contato
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Functions.js"></script>
+</body>
+
+</html>

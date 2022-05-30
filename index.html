@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruy Barbosa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/icon.jpg">
+</head>
+
+<body>
+     <!-- NavBar e video de banner -->
+    <header>
+        <nav>
+            <div class="menu-content">
+                <div class="icone">
+                    <a href="index.html">Ruy Barbosa</a>
+                </div>
+                <ul class="menu-itens">
+                    <li><a class="itens" href="">Início</a></li>
+                    <li><a class="itens" href="">Jogos</a></li>
+                    <li><a class="itens" href="">Quiz</a></li>
+                    <li><a class="itens" href="">Contato</a></li>
+                </ul>
+                <div class="cad-log">
+                    <button id="btn-ent">Entrar</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <div class="banner">
+                <video autoplay loop muted>
+                    <source src="./images/cinematic.mp4" type="video/mp4">
+                </video>
+                <div class="txt">
+                    <h3 class="title">Meus jogos <br> favoritos</h3>
+                    <p class="txt-sec2">Um site especialmente para demosntrar meu amor pelos jogos<br> e em como
+                        isso me afetou até hoje.
+                    </p>
+                    <div class="botoes-banner">
+                        <button class="btn-banner">Ver jogos</button>
+                        <button class="btn-banner">Por que</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- Section dos cards com jogos -->
+
+        <section id="Jogos">
+            <div class="conteudo">
+                <div class="container-txt">
+                    <h3>O que eu jogo?</h3>
+                    <p>Uma pequena biblioteca dos jogos que eu estou jogando atualmente, e venho mostrar a vocês hoje,
+                        como jogar esses jogos me influenciaram
+                        e me fizeram vivenciar diversas coisas que eu nunca esperava.</p>
+                </div>
+                <div class="container-cards">
+                    <!--League of legends-->
+                    <div class="cards">
+                        <div class="content-card">
+                            <h3>League of Legends</h3>
+                            <p>League of Legends é um jogo de estratégia em que duas equipes que se enfrentam para
+                                destruir a base uma da outra. Escolha entre 140 Campeões para realizar jogadas épicas,
+                                assegurar abates e destruir torres até a vitória.</p>
+                        </div>
+                    </div>
+                    <!--Valorant-->
+                    <div class="cards">
+
+                        <div class="content-card">
+                            <h3>Valorant</h3>
+                            <p>Valorant é um FPS tático 5x5 que tem como objetivo plantar ou desarmar a Spike. Os
+                                jogadores têm apenas uma vida por rodada e a partida é vencida pela equipe
+                                que ganhar 13 rodadas (de 25) primeiro.</p>
+                        </div>
+                    </div>
+                    <!--PUBG-->
+                    <div class="cards">
+
+                        <div class="content-card">
+                            <h3>PUBG</h3>
+                            <p>Um jogo de até 100 jogadores em uma ilha em busca de armas e equipamento buscando ser o
+                                ultimo a sobreviver.
+                                A área diminui progressivamente, confinando
+                                os sobreviventes a um espaço cada vez menor e forçando confrontos.</p>
+                        </div>
+                    </div>
+                    <!--Worms-->
+                    <div class="cards">
+                        <div class="content-card">
+                            <h3>Worms</h3>
+                            <p>Worms é um de estratégia, a série de jogos Worms cria um novo estilo de jogos de
+                                raciocínio. Os jogadores controlam um time de vermes que têm como objetivo principal
+                                destruir os times adversários.</p>
+                        </div>
+                    </div>
+                    
+
+                </div>
+                <div class="alinhar-btn">
+                    <button onclick="showSection()">Ver mais</button>
+                </div>
+            </div>
+           
+            
+        </section>
+        <section id="biblioteca" style="display: none;">
+
+            <div class="container-biblioteca">
+                <div class="divisoria">
+                    <div class="card-vid"></div>
+                </div>
+                <div class="divisoria">
+                    <div class="card-vid"></div>
+                    <div class="card-vid"></div>
+                </div>
+                <div class="divisoria">
+                    <div class="card-vid"></div>
+                </div>
+                <div class="divisoria">
+                    <div class="card-vid"></div>
+                    <div class="card-vid"></div>
+                </div>
+                <div class="divisoria">
+                    <div class="card-vid"></div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="quiz">
+            <div class="container-quiz">
+                <div class="quiz"></div>
+                <div class="container-vid">
+                    <div class="vid-reyna"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Começo do footer -->
+
+    <footer>
+        <div class="container-footer">
+            <div class="esquerda">
+                <div class="itens-footer">
+                    <a href="index.html">Início</a>
+                    <a href="">Porque</a>
+                    <a href="">Início</a>
+                    <a href="">Início</a>
+                </div>
+                <div class="detalhe1"></div>
+                <div class="assinatura">
+                    <h3>Developed by @Ruy 2022</h3>
+                </div>
+            </div>
+            <div class="direita">
+                <div class="sociais">
+                    <a href="https://github.com/RuyBarbosa22" target="_blank"><img src="./images/github.svg"></a>
+                    <!--Git Hub-->
+                    <a href="https://www.instagram.com/ysd.ruyy/" target="_blank"><img src="./images/instagram.svg"></a>
+                    <!--Istagram-->
+                    <a href="https://steamcommunity.com/id/MeneAkatsu/" target="_blank"><img
+                            src="./images/steam.svg"></a>
+                    <!--Steam-->
+                    <a href="https://www.linkedin.com/in/ruy-barbosa-231aa1239/" target="_blank"><img
+                            src="./images/linkedin.svg"></a>
+                    <!--Linkedin-->
+                    <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsCcMvcDQrZxBgTPHdpszXvKgsLVtPPxLXwThqFLGjNvjGMvhpklMcXlclQBLnzXKtFCnxbv"
+                        target="_blank"><img src="./images/gmail.svg"></a>
+                    <!--Gmail-->
+                </div>
+                <div class="detalhe2"></div>
+                <div class="container-contato">
+                    <p id="desc-btn">Algum dúvida ou sugestão? Fale comigo!</p>
+                    <button id="btn-footer">
+                        Contato
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Functions.js"></script>
+</body>
+
+</html>

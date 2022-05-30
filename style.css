@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100&display=swap');
+
+@font-face {
+  font-family: "Gazpacho";
+  src: url(../projetoPessoal/font/Gazpacho\ Black.ttf)
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  vertical-align: baseline;
+  list-style: none;
+  border: 0
+}
+
+/*usar fonte gazpacho para o titulo do site*/
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  z-index: 100000;
+}
+
+.menu-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 8vh;
+  background-color: transparent;
+}
+
+.sticky {
+  background-color: #2c2c2c;
+  height: 8vh;
+  transition: .5s;
+  box-shadow: rgba(0, 0, 0, .4) 0px 3px 3px;
+}
+
+
+.cad-log {
+  width: 20vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: transparent;
+  padding-right: 5%;
+  gap: 10%;
+}
+
+.icone {
+  width: 20vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.icone a {
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.5em;
+  color: white;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+}
+
+.menu-itens {
+  width: 60vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  gap: 12%;
+  padding-right: 5%;
+  background-color: transparent;
+}
+
+.menu-itens a {
+  text-decoration: none;
+  font-size: 1.4em;
+  font-weight: 400;
+  color: white;
+  font-family: 'Outfit', sans-serif;
+}
+
+#btn-ent {
+  font-size: 1.2em;
+  cursor: pointer;
+  width: 12vw;
+  height: 65%;
+  border-radius: 2px;
+  color: white;
+  margin-left: 50%;
+  font-family: 'Outfit', sans-serif;
+  background: rgb(112, 21, 194);
+  background: linear-gradient(48deg, rgba(112, 21, 194, 1) 0%, rgba(146, 47, 250, 1) 50%, rgba(196, 85, 255, 1) 100%);
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.644), rgba(0,0,0,0.644));  
+}
+
+.banner video { 
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .banner video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .banner video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.txt {
+  position: absolute;
+  top: 45%;
+  left: 5%;
+}
+
+.title {
+  font-size: 4em;
+  color: white;
+  font-family: "Gazpacho", serif;
+  text-align: left;
+}
+
+.txt-sec2 {
+  font-size: 1.2em;
+  color: white;
+  font-family: "Gazpacho";
+}
+
+.botoes-banner {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: absolute;
+  margin-top: 5%;
+}
+
+.btn-banner {
+  width: 14vw;
+  height: 5vh;
+  margin-right: 10%;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 400;
+  cursor: pointer;
+  font-family: 'Outfit', sans-serif;
+  background: rgb(112, 21, 194);
+  background: linear-gradient(48deg, rgba(112, 21, 194, 1) 0%, rgba(146, 47, 250, 1) 50%, rgba(196, 85, 255, 1) 100%);
+}
+
+.container-txt {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #2c2c2c;
+  width: 100%;
+  padding-top: 5%;
+}
+
+.container-txt h3 {
+  font-size: 4em;
+  font-family: 'Gazpacho';
+  font-weight: 600;
+  color: white;
+}
+
+container-txt h3 {
+  font-size: 4em;
+  margin-top: 5%;
+  font-family: 'Gazpacho';
+  font-weight: 600;
+  color: white;
+}
+
+.container-txt p {
+  font-size: 1.4em;
+  margin-top: 2%;
+  font-family: 'Ourfit', sans-serif;
+  font-weight: 200;
+  color: white;
+  width: 50%;
+  text-align: center;
+  padding-bottom: 3%;
+}
+
+.container-cards {
+  width: 100%;
+  padding-top: 2%;
+  padding-bottom: 5%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  background-color: #2c2c2c;
+  justify-content: space-evenly;
+}
+
+.cards {
+  width: 20%;
+  height: 45vh;
+  border-radius: 20px;
+  background: rgb(112, 21, 194);
+  background: linear-gradient(48deg, rgba(112, 21, 194, 1) 0%, rgba(146, 47, 250, 1) 50%, rgba(196, 85, 255, 1) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-card {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content-card h3 {
+  margin-top: 5%;
+  text-align: center;
+  font-size: 1.5em;
+  color: white;
+  font-family: 'Gazpacho';
+}
+
+.content-card p {
+  width: 98%;
+  margin-top: 5%;
+  font-size: 1em;
+  color: white;
+  text-align: center;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+}
+
+.container-quiz {
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  width: 100%;
+  height: 100vh;
+  background-color: #2c2c2c;
+}
+
+.quiz {
+  width: 50%;
+  height: 80vh;
+  margin-top: 5%;
+  background-color: white;
+  border-radius: 1%;
+  margin-left: 5%;
+}
+
+.container-vid {
+  width: 35%;
+  height: 80vh;
+  background-color: green;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+.alinhar-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #2c2c2c;
+  width: 100%;
+  padding-bottom: 2%;
+}
+
+.alinhar-btn button {
+  width: 14vw;
+  height: 5vh;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 400;
+  cursor: pointer;
+  font-family: 'Outfit', sans-serif;
+  background: rgb(112, 21, 194);
+  background: linear-gradient(48deg, rgba(112, 21, 194, 1) 0%, rgba(146, 47, 250, 1) 50%, rgba(196, 85, 255, 1) 100%);
+}
+
+/*design biblioteca*/
+
+.container-biblioteca {
+  width: 100%;
+  height: 100vh;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background-color: gray;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.divisoria {
+  width: 20%;
+  height: 100%;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2%;
+}
+
+.card-vid {
+  width: 100%;
+  height: 50%;
+  border: solid 5px black;
+  background-color: green;
+  margin-top: 2%;
+}
+
+#biblioteca {
+  transition: 2s;
+  opacity: 0;
+}
+
+/*footer*/
+
+.container-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  bottom: 0;
+  position: relative;
+  background-color: #383838;
+  padding-bottom: 1%;
+  padding-top: 2%;
+}
+
+.esquerda {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 15vh;
+  align-items: center;
+}
+
+.direita {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 100%;
+  align-items: center;
+}
+
+.sociais {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+  margin-bottom: 1%;
+}
+
+.sociais img {
+  width: 3.5vw;
+  height: 3.5vh;
+  opacity: 0.4;
+}
+
+.itens-footer {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.itens-footer a {
+  text-decoration: none;
+  font-family: 'Outfit', sans-serif;
+  color: white;
+  opacity: 0.6;
+  font-size: 1.4em;
+  cursor: pointer;
+}
+
+.assinatura {
+  font-family: 'Outfit', sans-serif;
+  margin-top: 4%;
+  margin-top: 4%
+}
+
+.assinatura h3 {
+  font-size: 0.9em;
+  color: white;
+  opacity: 0.4;
+  font-family: 'Outfit', sans-serif;
+}
+
+#btn-footer {
+  background-color: black;
+  color: white;
+  width: 120px;
+  height: 30px;
+  font-family: 'Outfit', sans-serif;
+  padding: 1.5%;
+}
+
+#desc-btn {
+  font-size: 1em;
+  color: white;
+  width: 50%;
+  text-align: left;
+  font-family: 'Outfit', sans-serif;
+}
+
+.container-contato {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 65%;
+  margin-top: 4%;
+  margin-bottom: 2%;
+  gap: 10%;
+}
+
+.detalhe1 {
+  width: 50%;
+  height: 2px;
+  margin-top: 1%;
+  opacity: 0.4;
+  background-color: white;
+}
+
+.detalhe2 {
+  width: 65%;
+  height: 2px;
+  margin-top: 1%;
+  opacity: 0.4;
+  background-color: white;
+}

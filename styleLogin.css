@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100&display=swap');
+
+@font-face {
+  font-family: "Gazpacho";
+  src: url(../projetoPessoal/font/Gazpacho\ Black.ttf)
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  vertical-align: baseline;
+  list-style: none;
+  border: 0
+}
+
+/*usar fonte gazpacho para o titulo do site*/
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  z-index: 100000;
+}
+
+.menu-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 8vh;
+
+  background-color: #2c2c2c;
+}
+
+.sticky {
+  background-color: #2c2c2c;
+  height: 8vh;
+  transition: .5s;
+  box-shadow: rgba(0, 0, 0, .4) 0px 3px 3px;
+}
+
+
+.cad-log {
+  width: 20vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: transparent;
+  padding-right: 5%;
+  gap: 10%;
+}
+
+.icone {
+  width: 20vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.icone a {
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.5em;
+  color: white;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+}
+
+.menu-itens {
+  width: 60vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  gap: 12%;
+  padding-right: 5%;
+  background-color: transparent;
+}
+
+.menu-itens a {
+  text-decoration: none;
+  font-size: 1.4em;
+  font-weight: 400;
+  color: white;
+  font-family: 'Outfit', sans-serif;
+}
+
+#btn-ent {
+  font-size: 1.2em;
+  cursor: pointer;
+  width: 12vw;
+  height: 65%;
+  border-radius: 2px;
+  color: white;
+  margin-left: 50%;
+  font-family: 'Outfit', sans-serif;
+  background: rgb(112, 21, 194);
+  background: linear-gradient(48deg, rgba(112, 21, 194, 1) 0%, rgba(146, 47, 250, 1) 50%, rgba(196, 85, 255, 1) 100%);
+}
+
+/*gradiente de fundo*/
+.css-selector {
+  background: linear-gradient(181deg, #7015c2, #922ffa, #c455ff, #62a3e2);
+  background-size: 800% 800%;
+
+  -webkit-animation: gradiente 14s ease infinite;
+  -moz-animation: gradiente 14s ease infinite;
+  animation: gradiente 14s ease infinite;
+}
+
+@-webkit-keyframes gradiente {
+  0% {
+    background-position: 96% 0%
+  }
+
+  50% {
+    background-position: 5% 100%
+  }
+
+  100% {
+    background-position: 96% 0%
+  }
+}
+
+@-moz-keyframes gradiente {
+  0% {
+    background-position: 96% 0%
+  }
+
+  50% {
+    background-position: 5% 100%
+  }
+
+  100% {
+    background-position: 96% 0%
+  }
+}
+
+@keyframes gradiente {
+  0% {
+    background-position: 96% 0%
+  }
+
+  50% {
+    background-position: 5% 100%
+  }
+
+  100% {
+    background-position: 96% 0%
+  }
+}
+
+/*design Login*/
+
+.alinhamento {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5%;
+  padding-top: 8%;
+}
+
+.container-login {
+  width: 65%;
+  height: 75vh;
+  display: flex;
+  flex-direction: row;
+}
+
+/*design esqueda do Login*/
+
+.logleft {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  background: url(./images/backLogin.jpg);
+  background-size: cover;
+  flex-direction: column;
+  align-items: left;
+}
+
+#title-log {
+  color: white;
+  font-family: 'Gazpacho';
+  font-weight: 800;
+  font-size: 3em;
+  margin-top: 70%;
+  margin-left: 8%;
+  align-items: left;
+}
+
+#txt-log {
+  color: white;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.6em;
+  font-weight: 600;
+  align-items: left;
+  margin-left: 8%;
+  margin-top: 3%;
+}
+
+/*design direita do Login*/
+
+.logright {
+  width: 60%;
+  height: 100%;
+  background-color: #2c2c2c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logright h3 {
+  margin-top: 5%;
+  font-size: 2.2em;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  text-align: center;
+  color: white;
+}
+
+.logright p {
+  margin-top: 2%;
+  font-size: 1.2em;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 200;
+  text-align: center;
+  color: white;
+}
+
+.input-log {
+  width: 65%;
+  height: 40px;
+  border-radius: 5px;
+  padding-left: 5%;
+}
+
+.input-log:focus {
+  outline: none;
+}
+
+.input-log::placeholder {
+  font-size: 1.2em;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  text-align: left;
+  color: black;
+  opacity: 1;
+}
+
+.title-input {
+  margin-top: 8%;
+  margin-bottom: 1%;
+  font-size: 1em;
+  font-family: 'Outfit', bold;
+  font-weight: 200;
+  text-align: left;
+  color: white;
+  text-align: left;
+  margin-right: 55%;
+}
+
+.btn-log {
+  font-size: 1.2em;
+  cursor: pointer;
+  width: 15vw;
+  margin-top: 8%;
+  height: 6%;
+  border-radius: 2px;
+  color: white;
+  font-family: 'Outfit', sans-serif;
+  background: rgb(112, 21, 194);
+  background: linear-gradient(48deg, rgba(112, 21, 194, 1) 0%, rgba(146, 47, 250, 1) 50%, rgba(196, 85, 255, 1) 100%);
+}
+
+.container-span {
+  width: 100%;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2%;
+}
+
+.container-span span {
+  font-size: 1em;
+  font-family: 'Outfit', bold;
+  font-weight: 200;
+  text-align: left;
+  color: white;
+}
+
+.container-span a {
+  text-decoration: none;
+  font-size: 1em;
+  font-family: 'Outfit', bold;
+  font-weight: 200;
+  text-align: left;
+  color: rgba(146, 47, 250, 1);
+}
+
+
+/*footer*/
+
+.container-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  bottom: 0;
+  position: relative;
+  background-color: #2c2c2c;
+  padding-bottom: 1%;
+  padding-top: 2%;
+}
+
+.esquerda {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 15vh;
+  align-items: center;
+}
+
+.direita {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 100%;
+  align-items: center;
+}
+
+.sociais {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+  margin-bottom: 1%;
+}
+
+.sociais img {
+  width: 3.5vw;
+  height: 3.5vh;
+  opacity: 0.4;
+}
+
+.itens-footer {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.itens-footer a {
+  text-decoration: none;
+  font-family: 'Outfit', sans-serif;
+  color: white;
+  opacity: 0.6;
+  font-size: 1.4em;
+  cursor: pointer;
+}
+
+.assinatura {
+  font-family: 'Outfit', sans-serif;
+  margin-top: 4%;
+  margin-top: 4%
+}
+
+.assinatura h3 {
+  font-size: 0.9em;
+  color: white;
+  opacity: 0.4;
+  font-family: 'Outfit', sans-serif;
+}
+
+#btn-footer {
+  background-color: black;
+  color: white;
+  width: 120px;
+  height: 30px;
+  font-family: 'Outfit', sans-serif;
+  padding: 1.5%;
+}
+
+#desc-btn {
+  font-size: 1em;
+  color: white;
+  width: 50%;
+  text-align: left;
+  font-family: 'Outfit', sans-serif;
+}
+
+.container-contato {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 65%;
+  margin-top: 4%;
+  margin-bottom: 2%;
+  gap: 10%;
+}
+
+.detalhe1 {
+  width: 50%;
+  height: 2px;
+  margin-top: 1%;
+  opacity: 0.4;
+  background-color: white;
+}
+
+.detalhe2 {
+  width: 65%;
+  height: 2px;
+  margin-top: 1%;
+  opacity: 0.4;
+  background-color: white;
+}
