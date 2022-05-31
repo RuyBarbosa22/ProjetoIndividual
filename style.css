@@ -14,6 +14,7 @@
   border: 0
 }
 
+
 /*usar fonte gazpacho para o titulo do site*/
 
 header {
@@ -254,25 +255,6 @@ container-txt h3 {
   font-weight: 400;
 }
 
-.container-quiz {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
-  background-color: #2c2c2c;
-  padding-bottom: 2%;
-}
-
-.quiz {
-  width: 80%;
-  height: 80vh;
-  margin-top: 5%;
-  background-color: white;
-  border-radius: 1%;
-}
-
 .alinhar-btn {
   display: flex;
   flex-direction: column;
@@ -346,6 +328,7 @@ container-txt h3 {
   align-items: center;
   width: 100%;
   height: 100vh;
+
 }
 
 .container-esquerda-pq {
@@ -353,7 +336,7 @@ container-txt h3 {
   flex-direction: column;
   align-items: left;
   background-color: #2c2c2c;
-  width: 60%;
+  width: 65%;
   height: 100%;
 }
 
@@ -361,9 +344,14 @@ container-txt h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: blueviolet;
-  width: 40%;
+  background-color: #2c2c2c;
+  width: 35%;
   height: 100%;
+}
+
+.container-direita-pq img {
+  margin-top: 36%;
+  width: 100%;
 }
 
 .title-pq {
@@ -375,13 +363,6 @@ container-txt h3 {
   margin-top: 8%;
 }
 
-.container-btn-ctt {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  margin-top: 5%;
-  align-self: center;
-}
 
 .txt-pq {
   font-size: 1.2em;
@@ -393,34 +374,72 @@ container-txt h3 {
   text-align: left;
 }
 
-#btn-ctt-pq {
-  width: 14vw;
-  height: 8vh;
-  margin-left: 5%;
-  border: none;
-  border-radius: 3px;
-  color: white;
-  font-size: 1.2em;
-  font-weight: 400;
-  cursor: pointer;
-  font-family: 'Outfit', sans-serif;
-  background: rgb(112, 21, 194);
-  background: linear-gradient(48deg, rgba(112, 21, 194, 1) 0%, rgba(146, 47, 250, 1) 50%, rgba(196, 85, 255, 1) 100%);
+/* Section Quiz*/
+
+
+.container-quiz {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #2c2c2c;
+  padding-bottom: 5%;
 }
 
-.txt-contato {
-
-  font-size: 1.2em;
+.title-quiz {
+  width: 80%;
   color: white;
-  font-family: 'Outfit', sans-serif;
-  margin-left: 5%;
+  font-size: 3em;
+  font-family: 'Gazpacho', serif;
+  text-align: center;
+  font-weight: 600;
+}
+
+.txt-quiz {
   width: 50%;
-  text-align: left;
+  color: white;
+  font-size: 1.4em;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 200;
+  margin-top: 2%;
+  text-align: center;
 }
 
-.container-direita-pq video {
-  margin-top: 15%;
- width: 130%;
+
+.content-quiz {
+  margin-top: 3%;
+  width: 50%;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #383838;
+  border-radius: 3%;
+  padding: 2%;
+}
+
+.pergunta {
+  margin-top: 1%;
+  border-radius: 10px;
+  width: 90%;
+  height: 25%;
+  background-color: white;
+}
+
+.respostas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.alternativa {
+  width: 85%;
+  height: 30%;
+  background-color: white;
+  border-radius: 10px;
 }
 
 
