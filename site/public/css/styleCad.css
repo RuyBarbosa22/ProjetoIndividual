@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: "Gazpacho";
-    src: url(../css/fonts/Gazpacho\ Black.ttf);
+    src: url(./fonts/Gazpacho\ Black.ttf);
 }
 
 * {
@@ -178,7 +178,7 @@ header {
     display: flex;
     align-items: left;
     flex-direction: column;
-    background: url(./images/backCad.png);
+    background: url(../images/backCad.png);
     background-size: cover;
 }
 

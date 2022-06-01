@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entre em sua conta</title>
     <link rel="stylesheet" href="./css/styleLogin.css">
-    <link rel="shortcut icon" href="./css/images/icon.jpg">
+    <link rel="shortcut icon" href=".//images/icon.jpg">
 </head>
 
 <body>
@@ -34,6 +34,11 @@
     <main class="css-selector">
 
         <!-- Login -->
+        <div class="alerta_erro">
+            <div class="card_erro" id="cardErro">
+                <span id="mensagem_erro"></span>
+            </div>
+        </div>
         <div class="alinhamento">
             <div class="container-login">
                 <div class="logleft">
@@ -46,12 +51,12 @@
                     <p>Entre em sua conta e aproveite o blog!</p>
 
                     <span class="title-input">Email</span>
-                    <input autofocus placeholder="Exemplo@exemplo.com" type="email" id="email" class="input-log">
+                    <input autofocus placeholder="Exemplo@exemplo.com" type="email" id="email_input" class="input-log">
 
                     <span class="title-input">Senha</span>
-                    <input placeholder="****" type="password" id="senha" class="input-log">
+                    <input placeholder="****" type="password" id="senha_input" class="input-log">
 
-                    <button class="btn-log" onclick="Login()">Entrar</button>
+                    <button class="btn-log" onclick="entrar()">Entrar</button>
 
                     <div class="container-span">
                         <span>Player novo aqui no lobby?</span><a href="./cadastro.html">Crie uma conta!</a>
@@ -59,6 +64,13 @@
 
                 </div>
             </div>
+        </div>
+        <div id="div_aguardar" class="loading-div">
+            <img src="./images/loading.gif" id="loading-gif">
+        </div>
+
+        <div id="div_erros_login">
+
         </div>
     </main>
 
@@ -80,18 +92,18 @@
             </div>
             <div class="direita">
                 <div class="sociais">
-                    <a href="https://github.com/RuyBarbosa22" target="_blank"><img src="../public/css/images/github.svg"></a>
+                    <a href="https://github.com/RuyBarbosa22" target="_blank"><img src="./images/github.svg"></a>
                     <!--Git Hub-->
-                    <a href="https://www.instagram.com/ysd.ruyy/" target="_blank"><img src="../public/css/images/instagram.svg"></a>
+                    <a href="https://www.instagram.com/ysd.ruyy/" target="_blank"><img src="./images/instagram.svg"></a>
                     <!--Istagram-->
                     <a href="https://steamcommunity.com/id/MeneAkatsu/" target="_blank"><img
-                            src="../public/css/images/steam.svg"></a>
+                            src="./images/steam.svg"></a>
                     <!--Steam-->
                     <a href="https://www.linkedin.com/in/ruy-barbosa-231aa1239/" target="_blank"><img
-                            src="../public/css/images/linkedin.svg"></a>
+                            src="./images/linkedin.svg"></a>
                     <!--Linkedin-->
                     <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsCcMvcDQrZxBgTPHdpszXvKgsLVtPPxLXwThqFLGjNvjGMvhpklMcXlclQBLnzXKtFCnxbv"
-                        target="_blank"><img src="../public/css/images/gmail.svg"></a>
+                        target="_blank"><img src="./images/gmail.svg"></a>
                     <!--Gmail-->
                 </div>
                 <div class="detalhe2"></div>
@@ -106,7 +118,7 @@
         </div>
     </footer>
 
-    <script src="../src/Functions.js"></script>
+    <script src="./js/Functions.js"></script>
 </body>
 
 </html>

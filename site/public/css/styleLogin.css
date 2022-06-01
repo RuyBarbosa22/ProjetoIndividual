@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Gazpacho";
-  src: url(../css/fonts/Gazpacho\ Black.ttf);
+  src: url(./fonts/Gazpacho\ Black.ttf);
 }
 
 * {
@@ -175,7 +175,7 @@ header {
   width: 40%;
   height: 100%;
   display: flex;
-  background: url(./images/backLogin.jpg);
+  background: url(../images/backLogin.jpg);
   background-size: cover;
   flex-direction: column;
   align-items: left;
