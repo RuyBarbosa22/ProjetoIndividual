@@ -14,10 +14,8 @@
 }
 
 body {
-  background-color: #202020;
+  background-color: #181818;
 }
-
-/*usar fonte gazpacho para o titulo do site*/
 
 header {
   position: fixed;
@@ -37,7 +35,7 @@ header {
 }
 
 .sticky {
-  background-color: #202020;
+  background-color: #181818;
   height: 8vh;
   transition: 0.5s;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 3px;
@@ -185,7 +183,7 @@ header {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #202020;
+  background-color: #181818;
   width: 100%;
   padding-top: 5%;
 }
@@ -223,7 +221,7 @@ container-txt h3 {
   display: flex;
   align-items: center;
   flex-direction: row;
-  background-color: #202020;
+  background-color: #181818;
   justify-content: space-evenly;
 }
 
@@ -270,7 +268,7 @@ container-txt h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #202020;
+  background-color: #181818;
   width: 100%;
   padding-bottom: 2%;
 }
@@ -299,7 +297,7 @@ container-txt h3 {
   height: 100vh;
   padding-top: 15%;
   padding-bottom: 15%;
-  background-color: #202020;
+  background-color: #181818;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -308,7 +306,7 @@ container-txt h3 {
 .divisoria {
   width: 20%;
   height: 100%;
-  background-color: #202020;
+  background-color: #181818;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -320,7 +318,7 @@ container-txt h3 {
   width: 100%;
   height: 60%;
   border: solid 5px white;
-  background-color: #202020;
+  background-color: #181818;
   margin-top: 2%;
 }
 
@@ -341,14 +339,14 @@ container-txt h3 {
   flex-direction: row;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
 }
 
 .container-esquerda-pq {
   display: flex;
   flex-direction: column;
   align-items: left;
-  background-color: #202020;
+  background-color: #181818;
   width: 65%;
   height: 100%;
 }
@@ -357,7 +355,7 @@ container-txt h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #202020;
+  background-color: #181818;
   width: 35%;
   height: 100%;
 }
@@ -392,29 +390,68 @@ container-txt h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   width: 100%;
   height: 100vh;
-  background-color: #202020;
+  background-color: #181818;
   padding-bottom: 5%;
+  padding-top: 5%;
+}
+
+#blob1  {
+  position: absolute;
+  width: 15%;
+  margin-left: 5%;
+}
+
+#blob2 {
+  position: absolute;
+  width: 25%;
+  margin-left: 75%;
+}
+
+#blob3 {
+  position: absolute;
+  width: 30%;
+  margin-left: 65%;
+  margin-top: 40%;
+}
+
+#blob4 {
+  position: absolute;
+  width: 50%;
+  margin-right: 10%;
+  margin-top: 20%;
+}
+
+#blob5 {
+  position: absolute;
+  width: 20%;
+  margin-top: 15%;
+}
+
+#blob6 {
+  position: absolute;
+  width: 30%;
+  margin-left: 70%;
+  margin-top: 20%;
 }
 
 .title-quiz {
-  width: 80%;
+  width: 90%;
   color: white;
-  font-size: 3em;
+  font-size: 3.2em;
   font-family: 'Gazpacho', serif;
   text-align: center;
   font-weight: 600;
 }
 
 .txt-quiz {
-  width: 50%;
+  width: 40%;
   color: white;
-  font-size: 1.4em;
+  font-size: 1.2em;
   font-family: 'Outfit', sans-serif;
   font-weight: 200;
-  margin-top: 2%;
+  margin-top: 1%;
   text-align: center;
 }
 
@@ -473,15 +510,16 @@ container-txt h3 {
 }
 
 .container-btn-quiz {
-  margin-top: 3%;
+  margin-top: 2%;
   width: 50%;
   height: 70vh;
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #383838;
+  background-color: #242424;
   border-radius: 3%;
   padding: 2%;
+  position: relative;
   justify-content: center;
 }
 
@@ -494,7 +532,7 @@ container-txt h3 {
   background-color: rebeccapurple;
 }
 
-.container-quiz h3 {
+.container-btn-quiz h3 {
   width: 80%;
   color: white;
   font-size: 1.8em;
