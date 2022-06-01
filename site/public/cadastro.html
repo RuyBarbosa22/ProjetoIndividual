@@ -45,16 +45,17 @@
                     <p>Cadastre-se e aproveite o site!</p>
 
                     <span class="title-input">Nome</span>
-                    <input autofocus placeholder="Nome de usuário" type="text" id="nome" class="input-cad">
+                    <input autofocus placeholder="Nome de usuário" type="text" id="nome_input" class="input-cad">
 
                     <span class="title-input">Email</span>
-                    <input placeholder="Exemplo@exemplo.com" type="email" id="email" class="input-cad">
+                    <input placeholder="Exemplo@exemplo.com" type="email" id="email_input" class="input-cad">
 
                     <span class="title-input">Senha</span>
-                    <input placeholder="Senha" type="password" id="senha" class="input-cad">
+                    <input placeholder="Senha" type="password" id="senha_input" class="input-cad">
 
                     <span class="title-input-conf">Confirme sua senha</span>
-                    <input placeholder="Confirme sua senha" type="password" id="conf-senha" class="input-cad">
+                    <input placeholder="Confirme sua senha" type="password" id="confirmacao_senha_input"
+                        class="input-cad">
 
                     <button class="btn-cad" onclick="Cadastro()">Cadastrar</button>
 
@@ -64,7 +65,11 @@
                 </div>
             </div>
         </div>
+        <div id="div_aguardar" class="loading-div">
+            <img src="./assets/circle-loading.gif" id="loading-gif">
         </div>
+
+        <div id="div_erros_login"></div>
     </main>
 
     <!-- footer -->
@@ -84,9 +89,11 @@
             </div>
             <div class="direita">
                 <div class="sociais">
-                    <a href="https://github.com/RuyBarbosa22" target="_blank"><img src="../public/css/images/github.svg"></a>
+                    <a href="https://github.com/RuyBarbosa22" target="_blank"><img
+                            src="../public/css/images/github.svg"></a>
                     <!--Git Hub-->
-                    <a href="https://www.instagram.com/ysd.ruyy/" target="_blank"><img src="../public/css/images/instagram.svg"></a>
+                    <a href="https://www.instagram.com/ysd.ruyy/" target="_blank"><img
+                            src="../public/css/images/instagram.svg"></a>
                     <!--Istagram-->
                     <a href="https://steamcommunity.com/id/MeneAkatsu/" target="_blank"><img
                             src="../public/css/images/steam.svg"></a>

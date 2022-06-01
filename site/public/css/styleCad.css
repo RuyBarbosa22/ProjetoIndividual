@@ -302,19 +302,31 @@ header {
     font-weight: 200;
     text-align: left;
     color: white;
-  }
-  
-  .container-span a {
+}
+
+.container-span a {
     text-decoration: none;
     font-size: 1em;
     font-family: 'Outfit', bold;
     font-weight: 200;
     text-align: left;
     color: rgba(146, 47, 250, 1);
+}
+
+#div_erros_login {
+    margin-top: 15px;
+}
+
+.loading-div {
+    width: 50px;
+    margin: auto;
+    display: none;
   }
   
-  
-  
+  .loading-div img {
+    height: 50px;
+    width: 50px;
+  }
 
 
 /*footer*/
