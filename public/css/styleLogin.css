@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Gazpacho";
-  src: url(../projetoPessoal/font/Gazpacho\ Black.ttf)
+  src: url(../css/fonts/Gazpacho\ Black.ttf);
 }
 
 * {

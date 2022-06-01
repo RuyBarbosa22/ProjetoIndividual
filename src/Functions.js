@@ -2,6 +2,7 @@ window.addEventListener('scroll', function () {
   var nav = document.querySelector('.menu-content');
   nav.classList.toggle('sticky', this.window.scrollY > 0);
 });
+    
 
 //função da section invísivel pelo botão
 
@@ -38,6 +39,10 @@ function Contato() {
 
 function Login() {
   window.location.href = 'contato.html'; //encaminhamento tela de Contato
+}
+
+function TelaCadastro() {
+  window.location.href = 'cadastro.html' //encaminhamento tela de Cadastro
 }
 
 //função do quiz

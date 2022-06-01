@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: "Gazpacho";
-    src: url(../projetoPessoal/font/Gazpacho\ Black.ttf)
+    src: url(../css/fonts/Gazpacho\ Black.ttf);
 }
 
 * {
@@ -31,11 +31,11 @@ header {
     width: 100%;
     height: 8vh;
 
-    background-color: #2c2c2c;
+    background-color: #181818;
 }
 
 .sticky {
-    background-color: #2c2c2c;
+    background-color: #181818;
     height: 8vh;
     transition: .5s;
     box-shadow: rgba(0, 0, 0, .4) 0px 3px 3px;
@@ -153,39 +153,66 @@ header {
     }
 }
 
+/*Design Cadastro*/
 
+.alinhamento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 4%;
+    padding-top: 6%;
+}
 
+.container-cad {
+    width: 65%;
+    height: 85vh;
+    display: flex;
+    flex-direction: row;
+}
 
-/*Design Contato*/
+/* design da parte esqueda do cadastro */
 
-a {
-    text-decoration: none;
+.Cadleft {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    background: url(./images/backCad.png);
+    background-size: cover;
+}
+
+#title-cad {
+    color: white;
+    font-family: 'Gazpacho';
+    font-weight: 800;
+    font-size: 3em;
+    margin-top: 90%;
+    margin-left: 8%;
+    align-items: left;
+}
+
+#txt-cad {
     color: white;
     font-family: 'Outfit', sans-serif;
+    font-size: 1.6em;
+    font-weight: 600;
+    align-items: left;
+    margin-left: 8%;
+    margin-top: 3%;
 }
 
-.container-content-contato {
+.Cadright {
+    width: 60%;
+    height: 100%;
+    background-color: #181818;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding-top: 8%;
-    padding-bottom: 5%;
-    width: 100%;
 }
 
-.content-contato {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 40%;
-    height: 80vh;
-    padding-bottom: 1%;
-    background-color: #2c2c2c;
-}
-
-.title-contato {
-    margin-top: 5%;
+.Cadright h3 {
+    margin-top: 3%;
     font-size: 2.2em;
     font-family: 'Outfit', sans-serif;
     font-weight: 600;
@@ -193,67 +220,66 @@ a {
     color: white;
 }
 
-.desc-contato {
+.Cadright p {
     margin-top: 2%;
     font-size: 1.2em;
     font-family: 'Outfit', sans-serif;
     font-weight: 200;
     text-align: center;
     color: white;
-    width: 80%;
 }
 
-#title-input-cont1 {
-    margin-top: 5%;
-    margin-right: 50%;
-    margin-bottom: 2%;
-    font-size: 1.2em;
-    font-family: 'Outfit', sans-serif;
-    font-weight: 200;
-    text-align: left;
-    color: white;   
-}
 
-#title-input-cont2 {
-    margin-top: 3%;
-    margin-right: 32%;
-    margin-bottom: 2%;
-    font-size: 1.2em;
-    font-family: 'Outfit', sans-serif;
-    font-weight: 200;
-    text-align: left;
-    color: white;   
-}
-
-#txt-cont {
-    width: 65%;
-    height: 150px;
-    border-radius: 5px;
-    padding-left: 5%;
-    padding-bottom: 20%;
-}
-
-#email-cont {
+.input-cad {
     width: 65%;
     height: 40px;
     border-radius: 5px;
     padding-left: 5%;
 }
 
-#email-cont:focus {
+.input-cad:focus {
     outline: none;
 }
 
-#txt-cont:focus {
-    outline: none;
+.input-cad::placeholder {
+    font-size: 1.2em;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    text-align: left;
+    color: black;
+    opacity: 1;
 }
 
-#enviar-cont {
+.title-input {
+    margin-top: 3%;
+    margin-bottom: 1%;
+    font-size: 1em;
+    font-family: 'Outfit', bold;
+    font-weight: 200;
+    text-align: left;
+    color: white;
+    text-align: left;
+    margin-right: 55%;
+}
+
+.title-input-conf {
+    margin-top: 3%;
+    margin-bottom: 1%;
+    font-size: 1em;
+    font-family: 'Outfit', bold;
+    font-weight: 200;
+    text-align: left;
+    color: white;
+    text-align: left;
+    margin-right: 36%;
+}
+
+.btn-cad {
     font-size: 1.2em;
     cursor: pointer;
-    width: 10vw;
-    height: 8%;
-    margin-top: 5%;
+    width: 15vw;
+    margin-top: 8%;
+    height: 6%;
     border-radius: 2px;
     color: white;
     font-family: 'Outfit', sans-serif;
@@ -261,10 +287,34 @@ a {
     background: linear-gradient(48deg, rgba(112, 21, 194, 1) 0%, rgba(146, 47, 250, 1) 50%, rgba(196, 85, 255, 1) 100%);
 }
 
+.container-span {
+    width: 100%;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2%;
+}
 
-
-
-
+.container-span span {
+    font-size: 1em;
+    font-family: 'Outfit', bold;
+    font-weight: 200;
+    text-align: left;
+    color: white;
+  }
+  
+  .container-span a {
+    text-decoration: none;
+    font-size: 1em;
+    font-family: 'Outfit', bold;
+    font-weight: 200;
+    text-align: left;
+    color: rgba(146, 47, 250, 1);
+  }
+  
+  
+  
 
 
 /*footer*/
@@ -275,7 +325,7 @@ a {
     align-items: center;
     bottom: 0;
     position: relative;
-    background-color: #2c2c2c;
+    background-color: #181818;
     padding-bottom: 1%;
     padding-top: 2%;
 }
