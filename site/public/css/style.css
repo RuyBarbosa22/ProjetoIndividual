@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100&display=swap');
 
+
 @font-face {
   font-family: 'Gazpacho';
   src: url(./fonts/Gazpacho\ Black.ttf);
@@ -15,6 +16,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -153,7 +155,7 @@ header {
 .txt-sec2 {
   font-size: 1.2em;
   color: white;
-  font-family: 'Gazpacho';
+  font-family: 'Outfit', sans-serif;
 }
 
 .botoes-banner {

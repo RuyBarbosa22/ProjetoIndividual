@@ -4,8 +4,20 @@ window.addEventListener('scroll', function () {
 });
     
 
-//função da section invísivel pelo botão
+function showSnackBar() {
+  // Pega a div da SnackBar
+  var x = document.getElementById("snackbar");
 
+  // Add the "show" class to DIV
+  x.className = "show";
+
+  // After 3 seconds, remove the show class from DIV
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+
+
+
+//função da section invísivel pelo botão
 //contador do botão ver mais
 var btnClicks = 0;
 
@@ -31,22 +43,21 @@ function showSection() {
   btnClicks++;
 }
 
-//funções de encaminhamento de tela
 
+//funções de encaminhamento de tela
 function Contato() {
   window.location.href = 'login.html'; //encaminhamento tela de Login
 }
-
 function Login() {
   window.location.href = 'contato.html'; //encaminhamento tela de Contato
 }
-
 function TelaCadastro() {
   window.location.href = 'cadastro.html' //encaminhamento tela de Cadastro
 }
 
-//função do quiz
 
+
+//função do quiz
 var erros = 0;
 var acertos = 0;
 var contadorQuestao = 0;
@@ -62,7 +73,7 @@ var questoes = [
   'Qual personagem é o mestre das runas em league of legends?',
   'Qual o primeiro ginásio em pokemon fire red?',
   'Em celeste, qual o nome da personagem principal?',
-];
+]; //vetor das questões
 
 var opcoes = [
   ['Ouro', 'Netherite', 'Diamante', 'Esmeralda'],
@@ -75,7 +86,7 @@ var opcoes = [
   ['Jax', 'Ryze', 'Aurelion Sol', 'Xerath'],
   ['Pedra', 'Água', 'Grama', 'Elétrico'],
   ['Mabel', 'Melina', 'Madeline', 'Merlin'],
-];
+]; // matriz das opções de resposta
 
 var respostasC = [
   'Netherite',
@@ -88,12 +99,13 @@ var respostasC = [
   'Ryze',
   'Pedra',
   'Madeline',
-];
+]; // vetor das respostas certas
 
 
-// função quiz começa o jogo
+// função que começa o jogo
 
 function Quiz() { // defino quais divs ficam a mostra para o usuário
+
   if (contadorQuestao == 0) { // validação que inicia o jogo, que tira a div de apresentação e apresenta a div do quiz
     ct_btn_quiz.style.display = 'none';
     ct_score.style.display = 'none';
@@ -103,7 +115,7 @@ function Quiz() { // defino quais divs ficam a mostra para o usuário
 
 // validação que verifica se o jogo acabou e reseta contadores
 
-  if (contadorQuestao == 10) { // casoo em algum momento o contador de questoes chegar ao limite
+  if (contadorQuestao == 10) { // caso em algum momento o contador de questoes chegar ao limite
     const acertosSpan = document.getElementById('acertos'); // declaro o span do html como uma constante 
     const errosSpan = document.getElementById('erros');
 
@@ -170,7 +182,6 @@ function cleanAlternativesStyle() { // função que limpa as cores das alternati
 // função de Cadastro na tela de Cadastro.
 
 function cadastrar() {
-  aguardar();
 
   //Recupere o valor da nova input pelo nome do id
   // Agora vá para o método fetch logo abaixo
@@ -180,14 +191,12 @@ function cadastrar() {
   var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
   if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
-      cardErro.style.display = "block"
-      mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
 
+      snackbar.innerHTML = "É necessário preecher todos os campos!";
+      showSnackBar();
+      
       finalizarAguardar();
       return false;
-  }
-  else {
-      setInterval(sumirMensagem, 5000)
   }
 
   // Enviando o valor da nova input
@@ -208,9 +217,9 @@ function cadastrar() {
       console.log("resposta: ", resposta);
 
       if (resposta.ok) {
-          cardErro.style.display = "block";
 
-          mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+          snackbar.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+          showSnackBar();
 
           setTimeout(() => {
               window.location = "login.html";
@@ -229,9 +238,6 @@ function cadastrar() {
   return false;
 }
 
-function sumirMensagem() {
-  cardErro.style.display = "none"
-}
 
 
 
@@ -263,20 +269,9 @@ function limparSessao() {
   window.location = "../login.html";
 }
 
-// carregamento (loading)
-function aguardar() {
-  var divAguardar = document.getElementById("div_aguardar");
-  divAguardar.style.display = "flex";
-}
 
 function finalizarAguardar(texto) {
-  var divAguardar = document.getElementById("div_aguardar");
-  divAguardar.style.display = "none";
-
-  var divErrosLogin = document.getElementById("div_erros_login");
-  if (texto) {
-      divErrosLogin.innerHTML = texto;
-  }
+  snackbar.innerHTML = ""
 }
 
 
@@ -293,19 +288,15 @@ function fecharModal() {
 
 
 function entrar() {
-  aguardar();
-
+  
   var emailVar = email_input.value;
   var senhaVar = senha_input.value;
 
   if (emailVar == "" || senhaVar == "") {
-      cardErro.style.display = "block"
-      mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-      finalizarAguardar();
-      return false;
-  }
-  else {
-      setInterval(sumirMensagem, 5000)
+    snackbar.innerHTML = "É necessário preencher todos os campos"
+    showSnackBar();  
+    
+    return false;
   }
 
   console.log("FORM LOGIN: ", emailVar);
@@ -334,8 +325,11 @@ function entrar() {
               sessionStorage.NOME_USUARIO = json.nome;
               sessionStorage.ID_USUARIO = json.id;
 
+              snackbar.innerHTML = "Entrando..."
+              showSnackBar();
+
               setTimeout(function () {
-                  window.location = "./dashboard/cards.html";
+                  window.location = "./index.html";
               }, 1000); // apenas para exibir o loading
 
           });
@@ -343,6 +337,9 @@ function entrar() {
       } else {
 
           console.log("Houve um erro ao tentar realizar o login!");
+
+          snackbar.innerHTML = "Usuário ou senha inválidos!"
+          showSnackBar();
 
           resposta.text().then(texto => {
               console.error(texto);
