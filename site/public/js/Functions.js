@@ -195,7 +195,7 @@ function cadastrar() {
       snackbar.innerHTML = "É necessário preecher todos os campos!";
       showSnackBar();
       
-      finalizarAguardar();
+      // finalizarAguardar();
       return false;
   }
 
@@ -226,13 +226,13 @@ function cadastrar() {
           }, "2000")
           
           limparFormulario();
-          finalizarAguardar();
+          // finalizarAguardar();
       } else {
           throw ("Houve um erro ao tentar realizar o cadastro!");
       }
   }).catch(function (resposta) {
       console.log(`#ERRO: ${resposta}`);
-      finalizarAguardar();
+      // finalizarAguardar();
   });
 
   return false;
@@ -270,9 +270,9 @@ function limparSessao() {
 }
 
 
-function finalizarAguardar(texto) {
-  snackbar.innerHTML = ""
-}
+// function finalizarAguardar(texto) {
+//   snackbar.innerHTML = ""
+// }
 
 
 // modal
@@ -343,7 +343,7 @@ function entrar() {
 
           resposta.text().then(texto => {
               console.error(texto);
-              finalizarAguardar(texto);
+              // finalizarAguardar(texto);
           });
       }
 
@@ -357,3 +357,60 @@ function entrar() {
 function sumirMensagem() {
   cardErro.style.display = "none"
 }
+
+function enviarMensagem() {
+
+  //Recupere o valor da nova input pelo nome do id
+  // Agora vá para o método fetch logo abaixo
+  var mensagemVar = txt_cont.value;
+  var emailVar = email_cont.value;
+
+  if (emailVar == "" || mensagemVar == "") {
+
+      snackbar.innerHTML = "É necessário preecher todos os campos!";
+      showSnackBar();
+      
+      finalizarAguardar();
+      return false;
+  }
+
+  // Enviando o valor da nova input
+  fetch("/usuarios/enviarMensagem", {
+      method: "POST",
+      headers: {
+          "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+          // crie um atributo que recebe o valor recuperado aqui
+          // Agora vá para o arquivo routes/usuario.js
+          mensagemServer: mensagemVar,
+          emailServer: emailVar
+      })
+  }).then(function (resposta) {
+
+      console.log("resposta: ", resposta);
+
+      if (resposta.ok) {
+
+        snackbar.innerHTML = "Estamos enviado! Aguarde...";
+        showSnackBar();
+
+          setTimeout(() => {
+              window.location = "contato.html";
+          }, "2000")
+          
+          limparFormulario();
+          // finalizarAguardar();
+      } else {
+          snackbar.innerHTML = "Erro ao enviar mensagem!";
+          showSnackBar();
+
+      }
+  }).catch(function (resposta) {
+      console.log(`#ERRO: ${resposta}`);
+      // finalizarAguardar();
+  });
+
+  return false;
+}
+

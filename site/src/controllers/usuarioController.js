@@ -94,9 +94,42 @@ function cadastrar(req, res) {
     }
 }
 
+function enviarMensagem(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    
+    var emailVar = req.body.emailServer;
+    var mensagemVar = req.body.mensagemServer;
+
+    // Faça as validações dos valores
+    if (emailVar == undefined) {
+        res.status(400).send("Seu email está undefined!");
+    } else if (mensagemVar == undefined) {
+        res.status(400).send("Sua mensagem está undefined!");
+    } else {
+        
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.enviarMensagem(emailVar, mensagemVar)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro da mensagem! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
+
 module.exports = {
     entrar,
     cadastrar,
     listar,
+    enviarMensagem,
     testar
 }
