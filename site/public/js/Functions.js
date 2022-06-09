@@ -106,6 +106,11 @@ var respostasC = [
 
 function Quiz() { // defino quais divs ficam a mostra para o usuário
 
+  if(sessionStorage.logado = 'nao'){
+    alert("É necessário estar logado em uma conta!")
+    window.location.href = "login.html"
+  }
+
   if (contadorQuestao == 0) { // validação que inicia o jogo, que tira a div de apresentação e apresenta a div do quiz
     ct_btn_quiz.style.display = 'none';
     ct_score.style.display = 'none';
@@ -262,12 +267,12 @@ function validarSessao() {
   }
 }
 
-function limparSessao() {
-  // aguardar();
-  sessionStorage.clear();
-  // finalizarAguardar();
-  window.location = "../login.html";
-}
+// function limparSessao() {
+//   // aguardar();
+//   sessionStorage.clear();
+//   // finalizarAguardar();
+//   window.location = "../login.html";
+// }
 
 
 // function finalizarAguardar(texto) {
@@ -275,16 +280,16 @@ function limparSessao() {
 // }
 
 
-// modal
-function mostrarModal() {
-  var divModal = document.getElementById("div_modal");
-  divModal.style.display = "flex";
-}
+// // modal
+// function mostrarModal() {
+//   var divModal = document.getElementById("div_modal");
+//   divModal.style.display = "flex";
+// }
 
-function fecharModal() {
-  var divModal = document.getElementById("div_modal");
-  divModal.style.display = "none";
-}
+// function fecharModal() {
+//   var divModal = document.getElementById("div_modal");
+//   divModal.style.display = "none";
+// }
 
 
 function entrar() {
@@ -327,6 +332,8 @@ function entrar() {
 
               snackbar.innerHTML = "Entrando..."
               showSnackBar();
+
+              sessionStorage.logado = 'sim'
 
               setTimeout(function () {
                   window.location = "./index.html";
