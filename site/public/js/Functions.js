@@ -106,8 +106,8 @@ var respostasC = [
 
 function Quiz() { // defino quais divs ficam a mostra para o usuário
 
-  if(sessionStorage.logado = 'nao'){
-    alert("É necessário estar logado em uma conta!")
+  if(localStorage.logado == 'nao'){
+    alert("É necessário estar logado em conta!")
     window.location.href = "login.html"
   }
 
@@ -333,10 +333,10 @@ function entrar() {
               snackbar.innerHTML = "Entrando..."
               showSnackBar();
 
-              sessionStorage.logado = 'sim'
+              localStorage.logado = 'sim'
 
               setTimeout(function () {
-                  window.location = "./index.html";
+                  window.location.href = "./index.html";
               }, 1000); // apenas para exibir o loading
 
           });

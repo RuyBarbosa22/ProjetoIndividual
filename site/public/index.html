@@ -325,7 +325,10 @@
 <!--Importamos uma biblioteca JQuery-->
 <script>
 
-  sessionStorage.logado = 'nao'
+if(localStorage.logado == undefined){
+  localStorage.logado = 'nao'
+}
+  
     $(document).ready(function () {
         // adiciona o efeito de scrollagem suave me todos os links
         $("a").on('click', function (event) {
