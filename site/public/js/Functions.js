@@ -128,9 +128,6 @@ function Quiz() { // defino quais divs ficam a mostra para o usuário
     ct_score.style.display = 'flex';
     acertosSpan.innerHTML = `Acertos: ${acertos}`; //apresento o valor da quantidade de acertos (variável) para o usuário
     errosSpan.innerHTML = `Erros: ${erros}`;
-    contadorQuestao = 0; // defino o valor das questões como 0 para caso o usuário queira recomeçar
-    erros = 0 // o mesmo para os contadores de pontuação
-    acertos = 0
     return; //  para o programa
   }
 
@@ -334,6 +331,7 @@ function entrar() {
               showSnackBar();
 
               localStorage.logado = 'sim'
+              localStorage.id = +json.idUsuario;
 
               setTimeout(function () {
                   window.location.href = "./index.html";
@@ -399,7 +397,7 @@ function enviarMensagem() {
 
       if (resposta.ok) {
 
-        snackbar.innerHTML = "Estamos enviado! Aguarde...";
+        snackbar.innerHTML = "Estamos enviando! Aguarde...";
         showSnackBar();
 
           setTimeout(() => {
@@ -410,6 +408,71 @@ function enviarMensagem() {
           // finalizarAguardar();
       } else {
           snackbar.innerHTML = "Erro ao enviar mensagem!";
+          showSnackBar();
+
+      }
+  }).catch(function (resposta) {
+      console.log(`#ERRO: ${resposta}`);
+      // finalizarAguardar();
+  });
+
+  return false;
+}
+
+function enviarPontos() {
+
+  //Recupere o valor da nova input pelo nome do id
+  // Agora vá para o método fetch logo abaixo
+  var acertosVar = +document.getElementById("acertos").innerHTML.split(" ")[1];
+  console.log(acertosVar)
+
+  var idVar = +localStorage.id
+
+  if (acertosVar == "") {
+
+      snackbar.innerHTML = "Pontuação vazia!";
+      showSnackBar();
+      
+      finalizarAguardar();
+      return false;
+  }
+
+  // Enviando o valor da nova input
+  fetch("/usuarios/enviarPontos", {
+      method: "POST",
+      headers: {
+          "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+          // crie um atributo que recebe o valor recuperado aqui
+          // Agora vá para o arquivo routes/usuario.js
+          acertosServer: acertosVar,
+          fkServer: idVar
+      })
+  }).then(function (resposta) {
+
+      console.log("resposta: ", resposta);
+
+      if (resposta.ok) {
+
+        ct_score.innerHTML = ""
+        
+        fetch("/usuarios/ranking").then(val => {
+          val.json().then(json => {
+            for(let foda = 0; foda< json.length; foda++){
+              ct_score.innerHTML += `nome:${json[foda].nome} -- pontos: ${json[foda].acertos} <br>`
+              console.log(json[foda])
+
+            }
+          })
+      })
+
+        snackbar.innerHTML = "Carregando...";
+        showSnackBar();
+
+       
+      } else {
+          snackbar.innerHTML = "Erro ao carregar";
           showSnackBar();
 
       }

@@ -126,10 +126,56 @@ function enviarMensagem(req, res) {
     }
 }
 
+function enviarPontos(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+   
+    var fkVar = req.body.fkServer;
+    var acertosVar = req.body.acertosServer;
+    console.log(req.body)
+
+    // Faça as validações dos valores
+    if (acertosVar == undefined) {
+        res.status(400).send("Pontuação acertos undefined!");
+    } else {
+        
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.enviarPontos(acertosVar, fkVar)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao carregar a dashboard:  Erro:",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
+
+function ranking(req, res) {
+    usuarioModel.ranking()
+        .then(function (resultado) {
+            res.json(resultado);
+        }).catch(
+            function (erro) {
+                console.log(erro);
+                console.log("Houve um erro ao realizar a consulta! Erro: ", erro.sqlMessage);
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
+
 module.exports = {
     entrar,
     cadastrar,
     listar,
     enviarMensagem,
-    testar
+    enviarPontos,
+    testar,
+    ranking
 }

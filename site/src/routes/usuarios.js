@@ -20,8 +20,17 @@ router.post("/enviarMensagem", function (req, res) {
     usuarioController.enviarMensagem(req, res);
 })
 
+router.post("/enviarPontos", function (req, res) {
+    usuarioController.enviarPontos(req, res);
+})
+
 router.post("/autenticar", function (req, res) {
     usuarioController.entrar(req, res);
 });
+
+router.get("/ranking", function (req, res) {
+    usuarioController.ranking(req, res);
+});
+
 
 module.exports = router;
