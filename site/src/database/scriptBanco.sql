@@ -1,20 +1,20 @@
 create database BdIndividual;
-
+drop database BdIndividual;
 use BdIndividual;
+
+
+create table Pontuacao(
+idPontuacao int primary key auto_increment, 
+acertos int not null
+);
 
 create table Usuario(
 idUsuario int primary key auto_increment,
 nome varchar (40) not null,
 email varchar (40) check(email like '%@%'),
-senha varchar (20) not null
+senha varchar (20) not null,
+fkPontuacao int, foreign key (fkPontuacao) references Pontuacao(idPontuacao)
 )auto_increment=1;
-
-create table Pontuacao(
-idPontuacao int primary key, 
-acertos int not null,
-erros int not null,
-fkUsuario int, foreign key (fkUsuario) references Usuario(idUsuario) 
-);
 
 create table Mensagem(
 idMensagem int primary key,
